@@ -30,7 +30,7 @@ class Grader
             sc = gets.chomp.to_i
             score = sc
             grd = calculate_grade(sc)
-            puts "Student Name: #{student_name}, Assignment: #{assignment_name}, score: #{sc}, Grade: #{grd} "
+            puts "Student Grade: #{grd}, score: #{sc} "
         rescue Exception => e   # storing the exception object in e
             puts e.message            # output error message
         end
