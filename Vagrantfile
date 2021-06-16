@@ -13,9 +13,13 @@ Vagrant.configure("2") do |config|
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
     config.vm.box = "ubuntu/trusty64"
+    
     config.vm.network "private_network", ip: "127.0.0.1"
-    config.vm.network "forwarded_port", guest: 80, host: 8080
+    config.vm.network "forwarded_port", guest: 5500, host: 8080
+    config.vm.network "forwarded_port", guest: 8080, host: 8080
     config.vm.network "forwarded_port", guest: 443, host: 4443
+
+
 
     config.vm.synced_folder "./", "/var/www/html"
 
@@ -72,4 +76,5 @@ Vagrant.configure("2") do |config|
   #   apt-get update
   #   apt-get install -y apache2
   # SHELL
+  
 end
