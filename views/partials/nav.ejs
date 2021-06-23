@@ -1,0 +1,76 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container px-5">
+      <a class="navbar-brand" href="/">Start Bootstrap</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+
+              <%if (pagename=="Home"){%>
+                <a class="nav-link" style="color:orange" href="/" id="index.html">Home</a>
+              <%}else{%>
+                <a class="nav-link" href="/" id="index.html">Home</a>
+                <%}%>
+            </li>
+            
+            <%if (pagename=="About"){%>
+              <a class="nav-link" style="color:orange" href="/">About</a>
+            <%}else{%>
+              <a class="nav-link" href="/About">About</a>
+            <%}%>
+              
+          </ul>
+      </div>
+  </div>
+</nav>
+
+<div style="z-index: 12;display: block;
+text-align: right;
+background-color: #333a40;
+margin-right: 0px;
+padding-right: 20px;
+color: gray;
+position: absolute;
+width: 155px;
+margin-top: 4px;
+padding-top: 5px;
+right: 0px;
+border-radius: 10px;
+padding: 11px;
+font-size: 12px;">
+
+<form action="/login" method="POST">
+  <input type="text" placeholder="Enter your first name" id="fname" name="fname">
+  <input type="text" placeholder="Enter your last name" id="lname" name="lname">
+  <input type="text" placeholder="Enter your city" id="city" name="city">
+  <input type="text" placeholder="Enter your state" id="state" name="state">
+  <input id="zip" placeholder="Enter your zipcode" name="zip" type="number">
+  <input id="address" placeholder="Enter your address" onFocus="geolocate()" type="text">
+  <select>
+    <option selected disabled>--Select Age--</option>
+    <optgroup label="Teen">
+        <option>13-18</option>
+    </optgroup>
+    <optgroup label="Young Adult">
+        <option>18-25</option>
+    </optgroup>  
+    <optgroup label="Adult">
+      <option>25 & up</option>
+  </optgroup>                                                   
+</select>
+<input type="radio" name="gender" id="male"> 
+    <label for="m">Male</label>
+    
+<input type="radio" name="gender" id="female"> 
+    <label for="f">Female</label>
+    <label><input type="checkbox" checked>: I Agree</label> 
+    <textarea placeholder="Bio" rows="4" cols="30"></textarea>
+    <input type="submit"> 
+</form>   
+
+
+</div>
+
+
